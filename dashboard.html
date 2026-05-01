@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Hezekiah</title>
+    <link rel="icon" type="image/png" href="images/heze.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">HEZEKIAH</a>
+        <nav class="main-nav"><ul class="nav-links"><li><a href="#" onclick="alert('Logging out...')">Logout</a></li></ul></nav>
+    </header>
+
+    <div class="dashboard-layout">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <a href="#" class="active" onclick="openTab(event, 'overview')">📊 Overview</a>
+            <a href="#" onclick="openTab(event, 'documents')">📂 Documents</a>
+            <a href="#" onclick="openTab(event, 'invoices')">🧾 Invoices</a>
+        </div>
+
+               <!-- MAIN CONTENT -->
+        <div class="dash-content">
+            
+            <!-- OVERVIEW TAB -->
+            <div id="overview" class="tab-content active">
+                <h2>📊 Account Overview</h2>
+                <p style="color: #aaa;">Summary of your current business compliance status.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-box"><h3>Compliance Status</h3><p style="color:#2ecc71;">Active</p></div>
+                    <div class="stat-box"><h3>Unpaid Balance</h3><p>₱ 3,500</p></div>
+                    <div class="stat-box"><h3>Total Filed Docs</h3><p>12</p></div>
+                    <div class="stat-box"><h3>Next Deadline</h3><p style="color: #F28C28;">May 15</p></div>
+                </div>
+
+                <h3>Upcoming Deadlines</h3>
+                <table class="data-table">
+                    <thead><tr><th>Requirement</th><th>Filing Period</th><th>Due Date</th><th>Priority</th></tr></thead>
+                    <tbody>
+                        <tr><td>BIR Form 1701Q (1st Quarter ITR)</td><td>Q1 2026</td><td>May 15, 2026</td><td style="color: #e74c3c; font-weight: bold;">High</td></tr>
+                        <tr><td>SSS, PHIC, Pag-IBIG Remittance</td><td>April 2026</td><td>May 15, 2026</td><td style="color: #e74c3c; font-weight: bold;">High</td></tr>
+                        <tr><td>BIR Form 2551Q (Percentage Tax)</td><td>Q2 2026</td><td>July 25, 2026</td><td style="color: #2ecc71;">Normal</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- DOCUMENTS TAB -->
+            <div id="documents" class="tab-content">
+                <h2>📂 Government & Tax Documents</h2>
+                <p style="color: #aaa;">Manage your business registrations and monthly tax filings.</p>
+                
+                <table class="data-table">
+                    <thead><tr><th>Document Name</th><th>Filing Period</th><th>Date Filed</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr><td>BIR Certificate of Registration (COR)</td><td>Permanent</td><td>Jan 10, 2026</td><td style="color: #2ecc71;">Completed</td></tr>
+                        <tr><td>Mayor's Business Permit (Renewed)</td><td>Annual 2026</td><td>Jan 15, 2026</td><td style="color: #2ecc71;">Completed</td></tr>
+                        <tr><td>Barangay Business Clearance</td><td>Annual 2026</td><td>Jan 05, 2026</td><td style="color: #2ecc71;">Completed</td></tr>
+                        <tr><td>BIR Form 0605 (Annual Registration)</td><td>Annual 2026</td><td>Jan 20, 2026</td><td style="color: #2ecc71;">Completed</td></tr>
+                        <tr><td>BIR Form 1601C (Withholding Tax)</td><td>March 2026</td><td>Apr 10, 2026</td><td style="color: #2ecc71;">Completed</td></tr>
+                        <tr><td>BIR Form 2551Q (Percentage Tax)</td><td>Q1 2026</td><td>Apr 20, 2026</td><td style="color: #2ecc71;">Completed</td></tr>
+                        <tr><td>BIR Form 1701Q (Quarterly ITR)</td><td>Q1 2026</td><td>--</td><td style="color: #f1c40f;">Pending</td></tr>
+                        <tr><td>Monthly Bookkeeping Ledger</td><td>April 2026</td><td>--</td><td style="color: #f1c40f;">Processing</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- INVOICES TAB -->
+            <div id="invoices" class="tab-content">
+                <h2>🧾 Billing & Invoices</h2>
+                <p style="color: #aaa;">Manage your retainer fees and one-time service balances.</p>
+                
+                <table class="data-table">
+                    <thead><tr><th>Invoice ID</th><th>Service Description</th><th>Billing Date</th><th>Amount</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr><td>#INV-2026-001</td><td>Business & BIR Registration Setup</td><td>Jan 05, 2026</td><td>₱ 5,000</td><td style="color: #2ecc71;">Paid</td></tr>
+                        <tr><td>#INV-2026-002</td><td>Mayor's Permit Processing Fee</td><td>Jan 12, 2026</td><td>₱ 5,000</td><td style="color: #2ecc71;">Paid</td></tr>
+                        <tr><td>#INV-2026-003</td><td>Monthly Retainer (January)</td><td>Jan 31, 2026</td><td>₱ 3,500</td><td style="color: #2ecc71;">Paid</td></tr>
+                        <tr><td>#INV-2026-004</td><td>Monthly Retainer (February)</td><td>Feb 28, 2026</td><td>₱ 3,500</td><td style="color: #2ecc71;">Paid</td></tr>
+                        <tr><td>#INV-2026-005</td><td>Monthly Retainer (March)</td><td>Mar 31, 2026</td><td>₱ 3,500</td><td style="color: #2ecc71;">Paid</td></tr>
+                        <tr><td>#INV-2026-006</td><td>Monthly Retainer (April)</td><td>Apr 30, 2026</td><td>₱ 3,500</td><td style="color: #e74c3c;">Unpaid</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].className = tabcontent[i].className.replace(" active", ""); }
+            tablinks = document.querySelectorAll(".sidebar a");
+            for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace("active", ""); }
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Hezekiah Accounting</title>
+    <link rel="icon" type="image/png" href="images/heze.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        .icon-pin { background: #111; color: var(--accent-orange); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 4px; margin-bottom: 15px; font-size: 18px; border: 1px solid #333;}
+        .contact-container h1 { color: var(--accent-orange); margin-bottom: 10px; }
+        .contact-container h2, .contact-container h3 { color: var(--accent-orange); margin-bottom: 15px; margin-top: 25px; }
+        .contact-container p { color: #ccc; font-size: 14px; margin-bottom: 30px; line-height: 1.8; }
+        .office-details { margin-bottom: 40px; }
+        .office-details div { display: flex; align-items: center; gap: 10px; font-size: 14px; margin-bottom: 10px; color: #E8E8E8; }
+        .required-star { color: var(--accent-orange); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">HEZEKIAH</a>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html" class="outline-btn" style="color:#ffa94d;">Client Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        
+        <!-- Location Icon -->
+        <div class="icon-pin">📍</div>
+
+        <h1>Contact Us</h1>
+        <p>Our Hezekiah Head Office serves as the main hub of operations. The head office specializes in comprehensive tax accounting, business registration, and consultancy services. Visit us for personalized consultations and solutions that address your unique needs.</p>
+
+        <!-- Main Office Info Block -->
+        <div class="office-details">
+            <h2>Main Office</h2>
+            <div>🏢 Ground Flr. Rena Bldg. L4 B1 Gemini St. Nuestra Señora Dela Paz Subd. Antipolo, Rizal, Antipolo, Philippines</div>
+            <div>✉️ hezekiahinquiry@gmail.com</div>
+            <div>📞 0915 667 3946</div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #444; margin-bottom: 30px;">
+
+        <!-- Form Section -->
+        <h3>Contact Us</h3>
+        <p style="margin-bottom: 20px;">Fields marked with an <span class="required-star">*</span> are required</p>
+
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>Name <span class="required-star">*</span></label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone <span class="required-star">*</span></label>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email <span class="required-star">*</span></label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Message <span class="required-star">*</span></label>
+                    <textarea rows="6" placeholder="Write your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" style="width: 150px; align-self: flex-start;">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>&copy; 2026 Hezekiah Accounting Services Co. All Rights Reserved.</footer>
+
+</body>
+</html>
